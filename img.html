@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Grid-Template</title>
+    <link rel="icon" href="src/assets/logo.png">
+    <script src="src/fontawesome/all.js"></script>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      body{
+        position:relative;
+      }
+	  #home-btn{
+		  position:fixed;
+		  top:-9%;
+		  left:44%;
+		  background-color:white;
+		  height:140px;
+		  width:140px;
+		  border-radius:50%;
+		  z-index:99;
+		  border:1px solid black;
+	  }
+	  #container{
+		  height:120px;
+		  width:120px;
+		  border-radius:50%;
+		  background-color: #ec3333;
+		  transform: translate(10px, 10px);
+	  }
+	  #icon{
+		padding-top:62px;
+		padding-left:42px;
+		font-size:2rem;
+		cursor:pointer;
+	  }
+	  #icon a{
+		  text-decoration: none;
+		  color:white;
+	  }
+	  #container-img{
+		  position:relative;
+	  }
+	  #img{
+		  height:600px;
+		  width:900px;
+		  margin:50px auto 0 auto;
+		  border-radius:20px;
+		  background-image: url(./src/assets/img/pic11.jpg);
+		  background-position: center;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+	  }
+	  #para{
+		  max-width:1000px;
+		   margin:60px auto 40px auto;
+		   padding-left:10px;
+		   
+	  }
+	  .line{
+		  margin:20px 0;
+	  }
+	  #btn{
+		font-size:3rem;
+		cursor:pointer;
+	  }
+	  #left{
+		position: fixed;
+		  top:50%;
+		  color:green;
+		  left:0;
+		  z-index:99;
+	  }
+	  #right{
+		position: fixed;
+		  top:50%;
+		  color:green;
+		  right:0;
+		  z-index:99;
+	  }
+      #help{
+        position:fixed;
+        bottom:0;
+        left:48%;
+        padding:10px 20px 5px 20px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        background-color:#e74c3c;
+        color:white;
+        display: block;
+        cursor: pointer;
+      }
+      #helpsection{
+        visibility: hidden;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #e74c3c;
+        color:white;
+        padding:20px;
+        position:fixed;
+        bottom:0;
+        left:0;
+      }
+      #helpsection p{
+        width:90%;
+        margin:20px;
+      }
+      #helpsection h1{
+        font-family: arial;
+      }
+      #identy{
+        padding-left:10px
+      }
+	  #identy a{
+		  color:#fff;
+	  }
+	  #identy a:hover{
+		  color:blue;
+	  }
+      .small{
+        height:0;
+        background:none;
+      }
+      @media screen and (max-width:980px){
+        #help{
+          display:none;
+        }
+        #helpsection{
+          visibility:visible;
+          position:relative;
+          bottom:0;
+          left:0;
+         display: block;
+         text-align:center;
+         padding:40px;
+        }
+        #identy{
+          margin-top:80px;
+        }
+        .follow{
+          margin:30px 0;
+        }
+      }
+	  @media screen and (max-width:980px){
+		#img{
+		  height:500px;
+		  width:96%;
+		  margin:5px auto 0 auto;
+		}
+		#home-btn{
+			height:100px;
+			width:103px;
+			top:-2%;
+		}
+		#container{
+			height:80px;
+			width:80px;
+		}
+		#icon {
+			padding-top: 37px;
+			 padding-left: 26px;
+  			  font-size: 27px;
+		}
+		#para{
+			width:87%;
+		}
+	  }
+    </style>
+  </head>
+  <body>
+
+	<div id="home-btn">
+		<div id="container"><div id="icon"><a href="./index.html"><i class="fas fa-home"></i></a></div></div>
+	</div>
+
+	<div id="container-img">
+		<div id="img">
+		</div>
+		<div id="para">
+		<h1>At Last Its just a Thinking...</h1>
+		<hr width="40%" class="line">
+		<p><em>This themes are just for soing the project and the comments are accepted for this web template.
+			There are many people who are scared of darks. Cause the dark does not come  alone it comes with the change in the person.
+			Once there was a boy named "Danel", he was very anxious about new things. The character inside him was very strange, I mean
+			he was that kind of person who does stupid things for just samll things. One day he was in the tour with Sangey Lama. He thought 
+			of tricking him so He wonned the heart of his and took him to New place where there was going on the scam business. this business was the 
+			main income source for normal people like us. The place was full of scam. They used to teach how to scam people and the most funny thing was 
+			they were all proud of dooing thoese activities that had ruined alot of houses, family. Fuck off dont keep reading alot cause I am not writer
+			go do your business.</em>HA HAHA HAHAHA HA HA......  
+		</p>
+		</div>
+	</div>
+
+<div id="btn">
+	<a href="./img.html"><i class="fas fa-chevron-left" id="left"></i></a>
+	<a href="./right.html"><i class="fas fa-chevron-right" id="right"></i></a>
+</div>
+
+    <div id="help" onclick="help()"><i class="fas fa-info-circle help-icon"></i></div>
+    <div id="helpsection">
+      
+      <div class="para">
+        <h1>Hello this is me <bold>Sangey Lama</bold></h1><br>
+        <p>
+		This is the website coded by Sangey Lama. It has some complex part but was fun to do this project. There will be grid layout and use of Javascript as on click event. There is also abit use of vue js. Since I have just learnt Vue, In this page I have not used vue js for every events. I will try my best to upadate this project to vue project. 
+		The photos used in this project is from websites like <a target="_blank" href="https://unsplash.com/" style="text-decoration:none; color:yellow;">Unsplash</a> , <a target="_blank" href="https://www.pexels.com/" style="text-decoration:none; color:yellow;">Pexels</a> .
+        </p>
+      </div>
+      <div id="identy">
+        <h2>Follow Me</h2>
+        <br>
+        <a target="_blank" href="https://www.facebook.com/Erick.evon07" ><i style=" height: 30px;width:40px; margin-left:10px;"class="fab fa-facebook-f f-icon"></i></a>
+        <a target="_blank" href="https://www.instagram.com/tenzin761/"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-instagram f-icon "></i></a>
+	  <a target="_blank" href="https://github.com/Tenzin1000"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-github f-icon "></i></a>
+        <a target="_blank" href="https://twitter.com/Tenzin761"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-twitter f-icon"></i></a>
+        <hr style="margin:20px 0;">
+        &copy copyright issued from sangey's web template. 8 May 2020 (friday) 
+      </div>
+
+    </div>
+   
+    <script src="/dist/build.js"></script>
+    <script>
+
+      function help(){
+          var x = document.getElementById('helpsection');
+          var y=document.getElementById('helpsection').offsetHeight;
+          var help=document.getElementById('help');
+          if(x.style.visibility==='visible'){
+            x.style.visibility='hidden';
+            help.style.bottom="0px";
+          }
+          else{
+            x.style.visibility='visible';
+            help.style.bottom=y+"px";
+          }
+          
+
+      }
+
+      
+    </script>
+  </body>
+</html>

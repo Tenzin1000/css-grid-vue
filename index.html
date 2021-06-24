@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Grid-Template</title>
+    <link rel="icon" href="src/assets/logo.png">
+    <script src="src/fontawesome/all.js"></script>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      body{
+        position:relative;
+      }
+
+      #preloader{
+        position:fixed;
+        top:0;
+        left:0;
+        height:100vh;
+        width:100vw;
+        background:#9a727291;
+        z-index:99;
+      }
+      .remove-bg{
+        background: none;
+      }
+      h1{
+        font-family:cursive;
+        text-align: center;
+      }
+      .container{
+        border-radius:50%;
+        width:500px;
+        height:500px;
+        background-color:#ec3333;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        color:white;
+      }
+      .animate{
+        width:120px;
+        height:120px;
+        animation: move 2s forwards;
+      }
+      @keyframes move {
+        from{transform:translate(-50%,280%)}
+        to{transform:translate(-50%,-32%)}
+        
+      }
+      .container1{
+        height:550px;
+        width:550px;
+        border-radius:50%;
+        background-color:white;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        z-index:-99;
+      }
+      .animate1{
+        width: 140px;
+        height:140px;
+        animation:moveup 2s forwards;
+      }
+      @keyframes moveup {
+        from{transform:translate(-50%,232%)}
+        to{transform:translate(-50%,-33%)}
+      }
+      .center-text{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        font-size:2rem;
+      }
+      p{
+        font-size:1.2rem;
+        width:300px;
+      }
+      .btn{
+        font-size:1.2rem;
+        padding: 10px;
+        border-radius:20px;
+        outline: none;
+        margin:0 auto;
+        color:#ec3333e6;
+        display: flex;
+        align-items: center;
+        margin-top:50px;
+        cursor: pointer;
+      }
+      #icon{
+        display: none;
+        margin-top:32px;
+        transition: all 2s linear;
+        cursor: pointer;
+      }
+
+      #help{
+        position:fixed;
+        bottom:0;
+        left:48%;
+        padding:10px 20px 5px 20px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        background-color:#e74c3c;
+        color:white;
+        display: block;
+        cursor: pointer;
+      }
+
+      #helpsection{
+        visibility: hidden;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #e74c3c;
+        color:white;
+        padding:20px;
+        position:fixed;
+        bottom:0;
+        left:0;
+      }
+      #helpsection p{
+        width:90%;
+        margin:20px;
+      }
+      #helpsection h1{
+        font-family: arial;
+      }
+      #identy{
+        padding-left:10px
+      }
+	  #identy a{
+		  color:#fff;
+	  }
+    #identy a:hover{
+      color:blue;
+    }
+      .small{
+        height:0;
+        background:none;
+      }
+
+      @media screen and (max-width:980px){
+        #help{
+          display:none;
+        }
+        #helpsection{
+          visibility:visible;
+          position:relative;
+          bottom:0;
+          left:0;
+         display: block;
+         text-align:center;
+         padding:40px;
+        }
+        #identy{
+          margin-top:80px;
+        }
+        .follow{
+          margin:30px 0;
+        }
+      }
+      @media screen and (max-width:746px){
+
+      .container{
+        height: 300px;
+        width:300px;
+        font-size:16px;
+      }
+      #heading{
+        font-size:45px;
+        margin-bottom:10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+      }
+      #para{
+        font-size:17px;
+        width:auto;
+      }
+      .btn{
+        margin-top:10px;
+        font-size:20px;
+      }
+      .container1{
+        height: 320px;
+        width:320px;
+      
+      }
+      .animate{
+        width:80px;
+        height:80px;
+        animation: move 2s forwards;
+      }
+        .animate1{
+        width: 100px;
+        height:100px;
+        animation:moveup 2s forwards;
+      }
+      @keyframes moveup {
+        from{transform:translate(-50%,216%)}
+        to{transform:translate(-50%,-33%)}
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="preloader">
+  
+      <div class="container" id="container">
+        <div class="center-text">
+        <h1 id="heading">Sangey</h1>
+        <p id="para">This is the responsive Css grid with use of vue.</p>
+        <button class="btn" onclick="btn()" id= "button">lets Go</button>
+        <div id="icon" onclick="home()"><i class="fas fa-home"></i></div>
+        </div>
+          
+      </div>
+      <div id="container1" class="container1"></div>
+    
+    </div>
+    <div id="app"></div>
+    
+    <div id="help" onclick="help()"><i class="fas fa-info-circle help-icon"></i></div>
+    <div id="helpsection">
+      
+      <div class="para">
+        <h1>Hello this is me <bold>Sangey Lama</bold></h1><br>
+        <p>
+        This is the website coded by Sangey Lama. It has some complex part but was fun to do this project. There will be grid layout and use of Javascript as on click event. There is also abit use of vue js. Since I have just learnt Vue, In this page I have not used vue js for every events. I will try my best to upadate this project to vue project. 
+        The photos used in this project is from websites like <a target="_blank" href="https://unsplash.com/" style="text-decoration:none; color:yellow;">Unsplash</a> , <a target="_blank" href="https://www.pexels.com/" style="text-decoration:none; color:yellow;">Pexels</a> .
+        </p>
+      </div>
+      <div id="identy">
+        <h2 class="follow">Follow Me</h2>
+        <br>
+        <a target="_blank" href="https://www.facebook.com/Erick.evon07" ><i style=" height: 30px;width:40px; margin-left:10px;"class="fab fa-facebook-f f-icon"></i></a>
+        <a target="_blank" href="https://www.instagram.com/tenzin761/"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-instagram f-icon "></i></a>
+	  <a target="_blank" href="https://github.com/Tenzin1000"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-github f-icon "></i></a>
+        <a target="_blank" href="https://twitter.com/Tenzin761"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-twitter f-icon"></i></a>
+        <hr style="margin:20px 0;">
+        &copy copyright issued from sangey's web template. 8 May 2020 (friday)
+      </div>
+
+    </div>
+   
+    <script src="../dist/build.js"></script>
+    <script>
+      function home(){
+        var down=document.getElementById('container');
+        var down1=document.getElementById('container1');
+          down.classList.remove('animate');
+          down1.classList.remove('animate1');
+  
+        var icon =document.getElementById('icon');
+        icon.style.display="none";
+
+        var element = document.getElementById('heading');
+         element.style.display="block";        
+         
+        var element = document.getElementById('para');
+          element.style.display="block";   
+         var element = document.getElementById('button');
+          element.style.display="block";   
+
+   var preloader= document.getElementById('preloader');
+        preloader.style.height="100vh"
+      }
+      function btn(){
+        var preloader= document.getElementById('preloader');
+        preloader.classList.add('remove-bg');
+        preloader.style.height="0";
+
+        var container=document.getElementById('container');
+        container.classList.add('animate');
+        
+        
+        var container1=document.getElementById('container1');
+        container1.classList.add('animate1');
+
+        var h1= document.getElementById('heading');
+        var para= document.getElementById('para');
+
+        var element = document.getElementById('heading');
+         element.style.display="none";        
+         
+        var element = document.getElementById('para');
+          element.style.display="none";   
+         var element = document.getElementById('button');
+          element.style.display="none";   
+         
+         var x=document.getElementById('icon');
+	        if(x.style.display === "block"){
+	        	x.style.display="none";
+          	}
+	        else{
+	      	x.style.display="block";
+          }
+         }
+
+      function help(){
+          var x = document.getElementById('helpsection');
+          var y=document.getElementById('helpsection').offsetHeight;
+          var help=document.getElementById('help');
+          if(x.style.visibility==='visible'){
+            x.style.visibility='hidden';
+            help.style.bottom="0px";
+          }
+          else{
+            x.style.visibility='visible';
+            help.style.bottom=y+"px";
+          }
+          
+
+      }
+
+    </script>
+  </body>
+</html>

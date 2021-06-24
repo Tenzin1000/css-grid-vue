@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Grid-Template</title>
+    <link rel="icon" href="src/assets/logo.png">
+    <script src="src/fontawesome/all.js"></script>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      body{
+        position:relative;
+      }
+	  #home-btn{
+		  position:fixed;
+		  top:-9%;
+		  left:44%;
+		  background-color:white;
+		  height:140px;
+		  width:140px;
+		  border-radius:50%;
+		  z-index:99;
+		  border:1px solid black;
+	  }
+	  #container{
+		  height:120px;
+		  width:120px;
+		  border-radius:50%;
+		  background-color: #ec3333;
+		  transform: translate(10px, 10px);
+	  }
+	  #icon{
+		padding-top:62px;
+		padding-left:42px;
+		
+		font-size:2rem;
+		cursor:pointer;
+	  }
+	  #icon a{
+		  text-decoration: none;
+		  color:white;
+	  }
+      #container1{
+          max-width:1000px;
+          margin:100px auto;
+          height:140vhpx;
+          display:grid;
+          grid-template-columns:1fr 340px;
+          grid-gap: 50px;
+          overflow: hidden;
+      }
+      #img{
+        background-image: url(./src/assets/img/pic06.jpg);
+		  background-position: center;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+          border-radius:20px;
+          transition:all .6s ease-in-out;
+      }
+      #img:hover{
+        cursor: pointer;
+      }
+      #para{
+        padding-top:50px;
+        font-size:20px;
+      }
+	  #btn{
+		font-size:3rem;
+		cursor:pointer;
+	  }
+	  #left{
+		position: fixed;
+		  top:50%;
+		  color:green;
+		  left:0;
+          z-index:99;
+	  }
+	  #right{
+		position: fixed;
+		  top:50%;
+		  color:green;
+		  right:0;
+          z-index:99;
+	  }
+      span{
+        font-size:18px;
+        color:red;
+        cursor:pointer;
+      }
+      .text:hover{
+          text-decoration: underline;
+      }
+      #help{
+        position:fixed;
+        bottom:0;
+        left:48%;
+        padding:10px 20px 5px 20px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        background-color:#e74c3c;
+        color:white;
+        display: block;
+        cursor: pointer;
+      }
+      #helpsection{
+        visibility: hidden;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #e74c3c;
+        color:white;
+        padding:20px;
+        position:fixed;
+        bottom:0;
+        left:0;
+      }
+      #helpsection p{
+        width:90%;
+        margin:20px;
+      }
+      #helpsection h1{
+        font-family: arial;
+      }
+      #identy{
+        padding-left:10px
+      }
+	  #identy a{
+		  color:#fff;
+	  }
+    #identy a:hover{
+      color:blue;
+    }
+      .small{
+        height:0;
+        background:none;
+      }
+      @media screen and (max-width:980px){
+        #help{
+          display:none;
+        }
+        #helpsection{
+          visibility:visible;
+          position:relative;
+          bottom:0;
+          left:0;
+         display: block;
+         text-align:center;
+         padding:40px;
+        }
+        #identy{
+          margin-top:80px;
+        }
+        .follow{
+          margin:30px 0;
+        }
+		#home-btn{
+			height:100px;
+			width:103px;
+			top:-2%;
+		}
+		#container{
+			height:80px;
+			width:80px;
+		}
+		#icon {
+			padding-top: 37px;
+			 padding-left: 26px;
+  			  font-size: 27px;
+		}
+        #container1{
+            display: block;
+        }
+        #img{
+            height:100vh;
+            width:87%;
+            margin:0 auto;
+        }
+        #para{
+            margin-left:50px
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+	<div id="home-btn">
+		<div id="container"><div id="icon"><a href="./index.html"><i class="fas fa-home"></i></a></div></div>
+	</div>
+
+    <div id="container1">
+        <div id="img"></div>
+        <div id="para">
+            <h2>Nothing Gold Can Stay <span style="color:green"><br>By Robert Frost</span></h2>
+            <br>
+            <p>
+                  Nature's first green is gold,<br>
+                  Her hardest hue to hold.<br>
+                  Her early leaf's a flower;<br>
+                  But only so an hour.<br><br><br>
+                  Then leaf subsides to leaf.<br>
+                  So Eden sank to grief,<br>
+                  So dawn goes down to day.<br>
+                  Nothing gold can stay.<br><br>
+
+                <hr>
+                <br> <br>
+                <span>And so on ..this goes on and <span class="text" onclick="help()">&copyTenzin.2019.</span></span>
+            </p>
+                
+        </div>
+    </div>
+<div id="btn">
+	<a href="./img.html"><i class="fas fa-chevron-left" id="left"></i></a>
+	<a href="./right.html"><i class="fas fa-chevron-right" id="right"></i></a>
+</div>
+
+    <div id="help" onclick="help()"><i class="fas fa-info-circle help-icon"></i></div>
+    <div id="helpsection">
+      
+      <div class="para">
+        <h1>Hello this is me <bold>Sangey Lama</bold></h1><br>
+        <p>
+        This is the website coded by Sangey Lama. It has some complex part but was fun to do this project. There will be grid layout and use of Javascript as on click event. There is also abit use of vue js. Since I have just learnt Vue, In this page I have not used vue js for every events. I will try my best to upadate this project to vue project. 
+        The photos used in this project is from websites like <a target="_blank" href="https://unsplash.com/" style="text-decoration:none; color:yellow;">Unsplash</a> , <a target="_blank" href="https://www.pexels.com/" style="text-decoration:none; color:yellow;">Pexels</a> .
+        </p>
+      </div>
+      <div id="identy">
+        <h2>Follow Me</h2>
+        <br>
+        <a target="_blank" href="https://www.facebook.com/Erick.evon07" ><i style=" height: 30px;width:40px; margin-left:10px;"class="fab fa-facebook-f f-icon"></i></a>
+        <a target="_blank" href="https://www.instagram.com/tenzin761/"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-instagram f-icon "></i></a>
+	  <a target="_blank" href="https://github.com/Tenzin1000"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-github f-icon "></i></a>
+        <a target="_blank" href="https://twitter.com/Tenzin761"><i  style=" height: 30px;width:40px; margin-left:10px;" class="fab fa-twitter f-icon"></i></a>
+        <hr style="margin:20px 0;">
+        &copy copyright issued from sangey's web template. 8 May 2020 (friday) 
+      </div>
+
+    </div>
+   
+    <script src="/dist/build.js"></script>
+    <script>
+
+      function help(){
+          var x = document.getElementById('helpsection');
+          var y=document.getElementById('helpsection').offsetHeight;
+          var help=document.getElementById('help');
+          if(x.style.visibility==='visible'){
+            x.style.visibility='hidden';
+            help.style.bottom="0px";
+          }
+          else{
+            x.style.visibility='visible';
+            help.style.bottom=y+"px";
+          }
+          
+
+      }
+
+      
+    </script>
+  </body>
+</html>
