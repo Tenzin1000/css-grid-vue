@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, '/dist'),
-    publicPath: 'https://github.com/Tenzin1000/css-grid-vue/',
+    publicPath: 'https://tenzin1000.github.io/css-grid-vue/',
     filename: 'build.js'
   },
   module: {
