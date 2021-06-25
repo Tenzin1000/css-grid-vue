@@ -1,7 +1,7 @@
 <template>
 <div id="main1">
     <div id="container">
-        <article class="item1"><a href="././img.html" ><img src="img/pic01.jpg" alt="image"></a></article>
+        <article class="item1"><a href="././img.html" ><img src="../assets/img/pic01.jpg" alt="image"></a></article>
         <article class="item2"><a href="././img.html" ><img src="../assets/img/pic06.jpg" alt="image"></a></article>
         <article class="item3"><a href="././img.html" ><img src="../assets/img/pic09.jpg" alt="image"></a></article>
         <article class="item4"><a href="././img.html" ><img src="../assets/img/pic13.jpg" alt="image"></a></article>
